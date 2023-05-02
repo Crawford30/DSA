@@ -7,6 +7,11 @@ func binarySearch(inputArray:[Int], searcTerm: Int) -> Int? {
     //check if the array is not empty
     guard  !inputArray.isEmpty else  { return nil }
     
+    //If the array has ONLY one element, dont go in the proceed loop
+    if(inputArray.count == 1){
+        return inputArray[0] == searcTerm ? inputArray[0] : nil
+    }
+    
     var lowerIndex = 0
     var upperIndex = inputArray.count - 1
     
