@@ -3,6 +3,10 @@ import UIKit
 var dataArray: [Int] = [1,7,8,5,20,39,4]
 
 func binarySearch(inputArray:[Int], searcTerm: Int) -> Int? {
+    
+    //check if the array is not empty
+    guard  !inputArray.isEmpty else  { return nil }
+    
     var lowerIndex = 0
     var upperIndex = inputArray.count - 1
     
