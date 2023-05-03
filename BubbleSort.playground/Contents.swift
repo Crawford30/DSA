@@ -28,3 +28,14 @@ func bubbleSort(inputArray: [Int]) -> [Int?] {
 
 print("Bubble Sorted Array: \(bubbleSort(inputArray: unsortedArray))")
 //[0, 9, 14, 16, 2, -1, 25, 11, 5, 12, -9, 13, 409]
+
+//func bubbleSort<T: Comparable>(_ array: inout [T]) {
+//    let n = array.count
+//    for i in 0..<n {
+//        for j in 1..<n-i {
+//            if array[j] < array[j-1] {
+//                array.swapAt(j, j-1)
+//            }
+//        }
+//    }
+//}
