@@ -51,8 +51,6 @@ func mergeSortArray(inputArray: [Int]) -> [Int]? {
     guard inputArray.count > 1 else { return inputArray }
     
     let midIndex = inputArray.count / 2
-    var leftSortedArray: [Int]  = []
-    var rightSortedArray: [Int]  = []
     
      var leftIndex = 0
      var rightIndex = 0
