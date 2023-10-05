@@ -5,7 +5,6 @@ import UIKit
 //    return sentence.split{$0==" "}.map(String.init).filter{String($0) == String(String($0).reversed())}.count
 //}
 
-var greeting = "Hello, playground"
 
 
 func allPalindromes(sentence: String) -> [String: Int] {
@@ -47,3 +46,7 @@ fileprivate func isPalindrome(word: String) -> Bool {
 let sentence = "madam anna kayak notpalindrome anna"
 
 print(allPalindromes(sentence: sentence))
+
+//print(findPallinDromes(sentence: sentence))
+
+
