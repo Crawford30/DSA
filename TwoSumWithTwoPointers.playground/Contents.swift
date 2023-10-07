@@ -32,7 +32,7 @@ func twoSumWithTwoPointers(inputArray: [Int], targetNumber: Int) -> [Int] {
             
         }
         else if((currentSum) > targetNumber){
-            leftPointer -= 1
+            rightPointer -= 1
             
         }else{
             return [sortedArray[leftPointer], sortedArray[rightPointer]]
@@ -46,6 +46,7 @@ func twoSumWithTwoPointers(inputArray: [Int], targetNumber: Int) -> [Int] {
 }
 
 let input = [2, 7, 11, 15, 5, 3]
+//2,3,5,7,11,15
 let target = 20
 let result = twoSumWithTwoPointers(inputArray: input, targetNumber: target)
 
