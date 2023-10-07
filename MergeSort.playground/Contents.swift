@@ -33,21 +33,11 @@
 
 //Merge Sort uses recursion to sort the array in ascending Order
 func mergeSortArray(inputArray: [Int]) -> [Int]? {
-    var isSorted = true
-    
-    //Holds result of the sorted array
-    var sortedArray: [Int] = []
-   
     //Check if Array is not empty
     guard !inputArray.isEmpty else {
         return nil
     }
-    
-    //If it has only one element, returns it
-//    if(inputArray.count == 1){
-//        return inputArray
-//    }
-    
+        
     guard inputArray.count > 1 else { return inputArray }
     
     let midIndex = inputArray.count / 2
@@ -58,25 +48,17 @@ func mergeSortArray(inputArray: [Int]) -> [Int]? {
      var orderedArray: [Int] = []
      
     
-    
     let leftArray = mergeSortArray(inputArray: Array(inputArray[0..<midIndex]))
     
     let rightArray = mergeSortArray(inputArray: Array(inputArray[midIndex..<inputArray.count]))
     
-    
-    print("LEFT ARRAY: \(leftArray) RIGHT ARRAY: \(rightArray)")
-    
 
-   
     
     if let leftArray = leftArray, let rightArray = rightArray {
-        
-        
         while leftIndex < leftArray.count && rightIndex < rightArray.count {
             
                 let leftElement = leftArray[leftIndex]
                 let rightElement = rightArray[rightIndex]
-            
             
             if leftElement < rightElement {
                  orderedArray.append(leftElement)
@@ -90,51 +72,13 @@ func mergeSortArray(inputArray: [Int]) -> [Int]? {
                  orderedArray.append(rightElement)
                  rightIndex += 1
                }
-            
-            
-            
-//            if(leftElement < rightElement){
-//                orderedArray.append(leftElement)
-//                leftIndex +=
-//            } else if(leftElement > rightElement){
-//                orderedArray.append(rightElement)
-//                rightIndex +=
-//            } else{
-//                orderedArray.append(leftElement)
-//                leftIndex += 1
-//                orderedArray.append(rightElement)
-//                rightIndex += 1
-//
-//            }
-            
+        
         }
-//        for(index, element) in leftArray.enumerated() {
-//            if(leftArray[index] < leftArray[leftArray.count - 1]){
-//                isSorted = false
-//                leftSortedArray.append(element)
-//            }else{
-//                return nil
-//            }
-//
-//        }
-   
+
    
        }
 
 
-//    if let rightArray = rightArray{
-//        for(index, rightElement) in rightArray.enumerated() {
-//
-//            if(rightArray[index] < rightArray[index]){
-//                isSorted = false
-//                rightSortedArray.append(rightElement)
-//            }else{
-//                return nil
-//            }
-//
-//        }
-//    }
-//    return leftSortedArray
     
     if let leftArray = leftArray, let rightArray = rightArray {
         while leftIndex < leftArray.count {
